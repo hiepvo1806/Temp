@@ -10,4 +10,20 @@
         @JsonConvert.SerializeObject(Model, Formatting.Indented)
     </pre>
 </div>
-
+<div class="row">
+    <h2>Control Panel</h2>
+</div>
+<div class="row">
+    <button class="col-md-3" id="addNewProductBtn">Add new Product</button>
+</div>
+<script>
+    $( document ).ready(function() {
+        console.log("ready!");
+        $("#addNewProductBtn").click(function () {
+            $.get("product/Update",
+                function() {
+                    alert("product/Update success");
+                });
+        });
+    });
+</script>

@@ -20,5 +20,10 @@ namespace cqrsmvc5.Controllers
             var result = _productServices.GetAll();
             return View(result);
         }
+
+        public string Update()
+        {
+            return "Ok";
+        }
     }
 }
