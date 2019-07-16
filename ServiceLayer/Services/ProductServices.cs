@@ -12,20 +12,31 @@ namespace ServiceLayer.Services
     {
         public IEnumerable<Product> GetAll()
         {
-            return new List<Product>
+            var dbSet = Context.Storage;
+            if (dbSet == null)
             {
-                new Product()
-                {
-                    Description = "Plastic Ball",
-                    Id = 1,
-                    Name = "BALL"
-                }
-            };
+                Context.InitStorage();
+            }
+            return Context.Storage;
         }
 
         public void CreateOrUpdate(Product product)
         {
-            throw new NotImplementedException();
+            var dbSet = Context.Storage;
+            if (dbSet == null)
+            {
+                Context.InitStorage();
+            }
+
+            if (dbSet != null && dbSet.Any(q => q.Id == product.Id))
+            {
+                var findItem = dbSet.First(x => x.Id == product.Id);
+                findItem = product;
+            }
+            else
+            {
+                Context.Storage.Add(product);
+            }
         }
 
         public void Delete(int productId)

@@ -1,3 +1,5 @@
+using ServiceLayer.Interface;
+using ServiceLayer.Services;
 using System;
 
 using Unity;
@@ -42,6 +44,7 @@ namespace cqrsmvc5
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<IProductServices, ProductServices>();
         }
     }
 }
