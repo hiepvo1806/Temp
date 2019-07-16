@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
 using ServiceLayer.Interface;
+using ServiceLayer.Model;
 
 namespace cqrsmvc5.Controllers
 {
@@ -29,6 +30,14 @@ namespace cqrsmvc5.Controllers
 
         public string Update()
         {
+            Random rnd = new Random();
+            string name = Guid.NewGuid().ToString();
+            _productServices.CreateOrUpdate(new Product()
+            {
+                Id = rnd.Next(1,999),
+                Name = name,
+                Description = name
+            });
             return "Ok";
         }
     }

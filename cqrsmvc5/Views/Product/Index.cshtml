@@ -31,7 +31,6 @@
             $("#refreshBtn").click(function () {
                 $.get("/Product/RefreshIndex",
                     function (response) {
-                        alert("product/Index success");
                         $("#content").html(response);
                     });
             });
