@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cqrsmvc5", "cqrsmvc5\cqrsmvc5.csproj", "{53FF1200-3ACB-4B65-8546-C3177E935F1E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{F29FE79B-DFF4-4B5A-9EBE-F35D2A127C7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{53FF1200-3ACB-4B65-8546-C3177E935F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53FF1200-3ACB-4B65-8546-C3177E935F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53FF1200-3ACB-4B65-8546-C3177E935F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29FE79B-DFF4-4B5A-9EBE-F35D2A127C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29FE79B-DFF4-4B5A-9EBE-F35D2A127C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29FE79B-DFF4-4B5A-9EBE-F35D2A127C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29FE79B-DFF4-4B5A-9EBE-F35D2A127C7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

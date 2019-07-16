@@ -2,3 +2,5 @@
 cqrsmvc5/bin/
 cqrsmvc5/obj/
 packages/
+ServiceLayer/obj
+ServiceLayer/bin
