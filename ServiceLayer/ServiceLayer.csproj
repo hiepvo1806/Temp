@@ -43,6 +43,7 @@
     <Compile Include="Interface\IProductServices.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Context.cs" />
     <Compile Include="Services\ProductServices.cs" />
   </ItemGroup>
   <ItemGroup />

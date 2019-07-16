@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@using Newtonsoft.Json
+@model dynamic
+<h2>Product Index</h2>
+<div class="row">
+    <pre>
+        @JsonConvert.SerializeObject(Model, Formatting.Indented)
+    </pre>
+</div>
+
