@@ -1,3 +1,4 @@
+using cqrsmvc5.Instra;
 using ServiceLayer.Interface;
 using ServiceLayer.Services;
 using System;
@@ -17,6 +18,7 @@ namespace cqrsmvc5
           {
               var container = new UnityContainer();
               RegisterTypes(container);
+              AppMediatorConfig.BuildMediator(container);
               return container;
           });
 
