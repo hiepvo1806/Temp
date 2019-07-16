@@ -6,8 +6,8 @@
 @model dynamic
 <h2>Product Index</h2>
 <div class="row">
-    <pre>
-        @JsonConvert.SerializeObject(Model, Formatting.Indented)
+    <pre id="content">
+        @*@JsonConvert.SerializeObject(Model, Formatting.Indented)*@
     </pre>
 </div>
 <div class="row">
@@ -15,15 +15,27 @@
 </div>
 <div class="row">
     <button class="col-md-3" id="addNewProductBtn">Add new Product</button>
+    <button class="col-md-3" id="refreshBtn">Refresh</button>
 </div>
-<script>
-    $( document ).ready(function() {
-        console.log("ready!");
-        $("#addNewProductBtn").click(function () {
-            $.get("product/Update",
-                function() {
-                    alert("product/Update success");
-                });
+@section scripts
+{
+    <script>
+        $( document ).ready(function() {
+            console.log("ready!");
+            $("#addNewProductBtn").click(function () {
+                $.get("/Product/Update",
+                    function() {
+                        alert("product/Update success");
+                    });
+            });
+            $("#refreshBtn").click(function () {
+                $.get("/Product/RefreshIndex",
+                    function (response) {
+                        alert("product/Index success");
+                        $("#content").html(response);
+                    });
+            });
         });
-    });
-</script>
+    </script>
+}
+
